@@ -25,9 +25,6 @@ public class Predmet {
     public int getBrojStudenata() {
         return brojStudenata;
     }
-    public void setBrojStudenata(int brojStudenata) {
-        this.brojStudenata = brojStudenata;
-    }
 
     public int getMAX_BROJ_STUDENATA() {
         return MAX_BROJ_STUDENATA;

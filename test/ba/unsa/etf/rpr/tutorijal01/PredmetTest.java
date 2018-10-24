@@ -65,4 +65,25 @@ class PredmetTest {
         p.ispisi(prvi);
         assertEquals(1, p.getBrojStudenata());
     }
+
+    @Test
+    void testViseMetodaKlasePredmet() {
+        Predmet p = new Predmet("Matematika", 198, 900);
+        Student prvi = new Student("Neko", "Nekic", 18185);
+        p.upisi(prvi);
+        Student drugi = new Student("Alen", "Alenovic", 18198);
+        p.upisi(drugi);
+        Student treci = new Student("Nihad", "Nihic", 18222);
+        p.upisi(treci);
+        p.ispisi(drugi);
+        p.setNazivPredmeta("Statistika");
+        Student cetvrti = new Student("Haso", "Hasic", 18965);
+        p.upisi(cetvrti);
+        assertAll("Test vise metoda klase Predmet",
+                () -> assertEquals(3, p.getBrojStudenata()),
+                () -> assertEquals(900, p.getMAX_BROJ_STUDENATA()),
+                () -> assertEquals(198, p.getSifraPredmeta()),
+                () -> assertEquals("Statistika", p.getNazivPredmeta())
+        );
+    }
 }

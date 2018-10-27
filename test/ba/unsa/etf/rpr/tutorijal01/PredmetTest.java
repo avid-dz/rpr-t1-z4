@@ -103,6 +103,7 @@ class PredmetTest {
 
     @Test
     void testIspisaSpiskaSaPraznogPredmeta() {
-
+        Predmet p = new Predmet("Fizika", 167, 800);
+        assertFalse(p.ispisSpiskaStudenata());
     }
 }

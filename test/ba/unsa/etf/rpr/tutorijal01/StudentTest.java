@@ -44,16 +44,16 @@ class StudentTest {
         assertEquals(18189, s.getBrojIndexa());
     }
 
-    /*@Test
-    void toString() {
+    @Test
+    void testIspisaStudenta() {
         Student s = new Student("Dzavid", "Brdar", 18182);
         assertEquals("Brdar Dzavid (18182)", s.toString());
-    }*/
+    }
 
     @Test
     void testViseMetodaKlaseStudent() {
         Student s = new Student("Dzavid", "Brdar", 18182);
-        assertAll("Test ispisivanja studenta i ",
+        assertAll("Test gettera i ispisivanja studenta zajedno",
                 () -> assertEquals("Dzavid", s.getIme()),
                 () -> assertEquals("Brdar", s.getPrezime()),
                 () -> assertEquals(18182, s.getBrojIndexa()),

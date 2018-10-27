@@ -42,7 +42,7 @@ public class Predmet {
         nizStudenata[brojStudenata] = s;
         brojStudenata++;
     }
-    public void ispisi(Student s) {
+    public boolean ispisi(Student s) {
         boolean pronadjen = false;
         for (int i = 0; i < brojStudenata; i++) {
             if (nizStudenata[i].getIme().equals(s.getIme()) && nizStudenata[i].getPrezime().equals(s.getPrezime())
@@ -56,6 +56,7 @@ public class Predmet {
             }
         }
         if (pronadjen == false) System.out.println("Nije pronadjen takav student.");
+        return pronadjen;
     }
     public void ispisSpiskaStudenata() {
         for (int i = 0; i < brojStudenata; i++) {

@@ -50,7 +50,7 @@ class PredmetTest {
         p.upisi(s);
         s = new Student("Meho", "Mehic", 18987);
         p.upisi(s);
-        s = new Student("Meho", "Mehic", 18987);
+        s = new Student("Meho", "Mehovic", 18933);
         p.upisi(s);
         assertEquals(3, p.getBrojStudenata());
     }
@@ -98,7 +98,19 @@ class PredmetTest {
 
     @Test
     void testDodavanjaDvaputIstogStudenta() {
+        Predmet p = new Predmet("Logika", 125, 1000);
+        Student prvi = new Student("Neko", "Nekic", 18185);
+        p.upisi(prvi);
+        Student drugi = new Student("Neko", "Nekic", 18185);
+        assertFalse(p.upisi(drugi));
+    }
 
+    @Test
+    void testDuplogDodavanja() {
+        Predmet p = new Predmet("Logika", 125, 1000);
+        Student prvi = new Student("Neko", "Nekic", 18185);
+        p.upisi(prvi);
+        assertFalse(p.upisi(prvi));
     }
 
     @Test

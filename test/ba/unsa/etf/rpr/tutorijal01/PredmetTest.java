@@ -86,4 +86,23 @@ class PredmetTest {
                 () -> assertEquals("Statistika", p.getNazivPredmeta())
         );
     }
+
+    @Test
+    void testBrisanjaNepostojecegStudenta() {
+        Predmet p = new Predmet("Matematika", 198, 900);
+        Student prvi = new Student("Neko", "Nekic", 18185);
+        p.upisi(prvi);
+        Student neeevidentirani = new Student("Neevidentirani", "Neevidentiranovic", 10000);
+        assertFalse(p.ispisi(neeevidentirani));
+    }
+
+    @Test
+    void testDodavanjaDvaputIstogStudenta() {
+
+    }
+
+    @Test
+    void testIspisaSpiskaSaPraznogPredmeta() {
+
+    }
 }

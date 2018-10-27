@@ -43,6 +43,7 @@ public class Predmet {
         brojStudenata++;
     }
     public boolean ispisi(Student s) {
+        if (brojStudenata == 0) return false;
         boolean pronadjen = false;
         for (int i = 0; i < brojStudenata; i++) {
             if (nizStudenata[i].getIme().equals(s.getIme()) && nizStudenata[i].getPrezime().equals(s.getPrezime())
@@ -58,10 +59,12 @@ public class Predmet {
         if (pronadjen == false) System.out.println("Nije pronadjen takav student.");
         return pronadjen;
     }
-    public void ispisSpiskaStudenata() {
+    public boolean ispisSpiskaStudenata() {
+        if (brojStudenata == 0) return false;
         for (int i = 0; i < brojStudenata; i++) {
             System.out.print((i + 1) + ". ");
             System.out.println(nizStudenata[i]);
         }
+        return true;
     }
 }

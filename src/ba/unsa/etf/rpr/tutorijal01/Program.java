@@ -45,6 +45,11 @@ public class Program {
                     System.out.println();
                     break;
                 case 3:
+                    if (noviPredmet.getBrojStudenata() == 0) {
+                        System.out.println("Nema upisanih studenata na predmetu!");
+                        System.out.println();
+                        break;
+                    }
                     System.out.print("Unesite ime studenta za brisanje: ");
                     String imeStudentaZaBrisanje = scan.next();
                     System.out.print("Unesite prezime studenta za brisanje: ");
@@ -62,7 +67,10 @@ public class Program {
                     System.out.println();
                     break;
                 case 5:
-                    noviPredmet.ispisSpiskaStudenata();
+                    if (noviPredmet.getBrojStudenata() == 0)
+                        System.out.println("Nema upisanih studenata na predmetu!");
+                    else
+                        noviPredmet.ispisSpiskaStudenata();
                     System.out.println();
                     break;
             }

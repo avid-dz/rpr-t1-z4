@@ -60,9 +60,4 @@ class StudentTest {
                 () -> assertEquals("Brdar Dzavid (18182)", s.toString())
         );
     }
-
-    @Test
-    void testBrisanjaNepostojecegStudenta() {
-
-    }
 }
